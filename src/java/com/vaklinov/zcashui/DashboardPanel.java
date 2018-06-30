@@ -125,7 +125,7 @@ public class DashboardPanel
 			this.getClass().getClassLoader().getResource("images/btz_icon.png")));
 		tempPanel.add(logoLabel);
 		// TODO: use relative size
-		JLabel zcLabel = new JLabel("BitcoinZ Wallet ");
+		JLabel zcLabel = new JLabel("BZEdge Wallet ");
 		zcLabel.setFont(new Font("Helvetica", Font.BOLD | Font.ITALIC, 28));
 		tempPanel.add(zcLabel);
 		tempPanel.setToolTipText("Powered by BitcoinZ");
