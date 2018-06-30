@@ -179,7 +179,7 @@ public class SendCashPanel
 		tempPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));
 		tempPanel.add(destinationAmountField = new JTextField(13));
 		destinationAmountField.setHorizontalAlignment(SwingConstants.RIGHT);
-		tempPanel.add(new JLabel(" BTCZ    "));
+		tempPanel.add(new JLabel(" BZE    "));
 		amountPanel.add(tempPanel, BorderLayout.SOUTH);
 
 		JPanel feePanel = new JPanel(new BorderLayout());
@@ -188,7 +188,7 @@ public class SendCashPanel
 		tempPanel.add(transactionFeeField = new JTextField(13));
 		transactionFeeField.setText("0.0001"); // Default value
 		transactionFeeField.setHorizontalAlignment(SwingConstants.RIGHT);		
-		tempPanel.add(new JLabel(" BTCZ"));
+		tempPanel.add(new JLabel(" BZE"));
 		feePanel.add(tempPanel, BorderLayout.SOUTH);
 
 		amountAndFeePanel.add(amountPanel);
@@ -428,9 +428,9 @@ public class SendCashPanel
 
 				JOptionPane.showOptionDialog(
 					SendCashPanel.this.getRootPane().getParent(),
-					"The destination address to send BTCZ to:\n" +
+					"The destination address to send BZE to:\n" +
 					destinationAddress + "\n"+
-					"does not appear to be a valid BitcoinZ address. BTCZ addresses start with t or z!",
+					"does not appear to be a valid BitcoinZ address. BZE addresses start with t or z!",
 					"Destination address is incorrect...",
 					JOptionPane.DEFAULT_OPTION,
 					JOptionPane.ERROR_MESSAGE,
@@ -719,7 +719,7 @@ public class SendCashPanel
 
 			int option = JOptionPane.showOptionDialog(
 				SendCashPanel.this.getRootPane().getParent(),
-				"Succesfully sent " + amount + " BTCZ from address: \n" +
+				"Succesfully sent " + amount + " BZE from address: \n" +
 				sourceAddress + "\n" +
 				"to address: \n" +
 				destinationAddress + "\n\n" +
