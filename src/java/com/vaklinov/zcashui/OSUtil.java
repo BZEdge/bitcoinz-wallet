@@ -308,11 +308,11 @@ public class OSUtil
 				"/usr/bin/", // Typical Ubuntu
 				"/bin/",
 				"/usr/local/bin/",
-				"/usr/local/bitcoinz/bin/",
-				"/usr/lib/bitcoinz/bin/",
+				"/usr/local/bzedge/bin/",
+				"/usr/lib/bzedge/bin/",
 				"/opt/local/bin/",
-				"/opt/local/bitcoinz/bin/",
-				"/opt/bitcoinz/bin/"
+				"/opt/local/bzedge/bin/",
+				"/opt/bzedge/bin/"
 			};
 	
 			for (String d : dirs)
