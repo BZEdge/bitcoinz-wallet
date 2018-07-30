@@ -108,7 +108,7 @@ public class ZCashUI
     public ZCashUI(StartupProgressDialog progressDialog)
         throws IOException, InterruptedException, WalletCallException
     {
-        super("BZedge Wallet 1.0.0");
+        super("BZedge Wallet 1.0.4");
         
         if (progressDialog != null)
         {
@@ -681,7 +681,7 @@ public class ZCashUI
 			}
 		}
 		
-		File zenConfigFile = new File(dir, "bitcoinz.conf");
+		File zenConfigFile = new File(dir, "bzedge.conf");
 		
 		if (!zenConfigFile.exists())
 		{

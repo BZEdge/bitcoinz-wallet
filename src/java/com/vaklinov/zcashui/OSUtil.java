@@ -239,13 +239,13 @@ public class OSUtil
 	    
 	    if (os == OS_TYPE.MAC_OS)
 	    {
-	        dir = new File(userHome, "Library/Application Support/BitcoinZWallet");
+	        dir = new File(userHome, "Library/Application Support/BZEdgeWallet");
 	    } else if (os == OS_TYPE.WINDOWS)
 		{
-			dir = new File(System.getenv("LOCALAPPDATA") + "\\BitcoinZWallet");
+			dir = new File(System.getenv("LOCALAPPDATA") + "\\BZEdgeWallet");
 		} else
 	    {
-	        dir = new File(userHome.getCanonicalPath() + File.separator + ".BitcoinZWallet");
+	        dir = new File(userHome.getCanonicalPath() + File.separator + ".BZEdgeWallet");
 	    }
 	    
 		if (!dir.exists())
@@ -288,7 +288,7 @@ public class OSUtil
 	    File f;
 	    
 	    // Try with system property zcash.location.dir - may be specified by caller
-	    String ZCashLocationDir = System.getProperty("bitcoinz.location.dir");
+	    String ZCashLocationDir = System.getProperty("bzedge.location.dir");
 	    if ((ZCashLocationDir != null) && (ZCashLocationDir.trim().length() > 0))
 	    {
 	        f = new File(ZCashLocationDir + File.separator + command);
@@ -333,7 +333,7 @@ public class OSUtil
 	    		File pf = new File(programFiles);
 	    		if (pf.exists() && pf.isDirectory())
 	    		{
-	    			File ZDir = new File(pf, "BitcoinZ");
+	    			File ZDir = new File(pf, "BZEdge");
 	    			if (ZDir.exists() && ZDir.isDirectory())
 	    			{
 	    				File cf = new File(ZDir, command);
