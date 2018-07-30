@@ -13,7 +13,7 @@
 <currentDirectory>${EXECUTABLEPATH}</currentDirectory>
 <embeddedJar>true</embeddedJar>
 <executableName>bitcoinz-wallet.exe</executableName>
-<iconLocation>..\resources\images\BitcoinZ.png</iconLocation>
+<iconLocation>..\resources\images\bzedge.png</iconLocation>
 <initialMemoryHeap>536870912</initialMemoryHeap>
 <jarLocation>BitcoinZWallet.jar</jarLocation>
 <mainClassName>com.vaklinov.zcashui.ZCashUI</mainClassName>

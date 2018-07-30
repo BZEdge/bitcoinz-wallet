@@ -117,7 +117,7 @@ public class ZCashUI
         
         ClassLoader cl = this.getClass().getClassLoader();
 
-        this.setIconImage(new ImageIcon(cl.getResource("images/BitcoinZ.png")).getImage());
+        this.setIconImage(new ImageIcon(cl.getResource("images/bzedge.png")).getImage());
 
         Container contentPane = this.getContentPane();
 

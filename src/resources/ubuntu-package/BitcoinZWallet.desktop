@@ -1,13 +1,13 @@
 [Desktop Entry]
-Version=1.1.0.4
+Version=1.0.4
 Name=BitcoinZ Wallet
-Comment=BitcoinZ Desktop GUI Wallet (full node)
-GenericName=BitcoinZ Wallet
-Keywords=BitcoinZ;Crypto-currency;BZE;
-Exec=bitcoinz-wallet
+Comment=BZEdge Desktop GUI Wallet (full node)
+GenericName=BZEdge Wallet
+Keywords=BZEdge;Crypto-currency;BZE;
+Exec=bzedge-wallet
 Terminal=false
 X-MultipleArgs=false
 Type=Application
-Icon=/usr/lib/bitcoinz-wallet/BitcoinZ.png
+Icon=/usr/lib/bzedge-wallet/BitcoinZ.png
 Categories=GNOME;Application;
 StartupNotify=true

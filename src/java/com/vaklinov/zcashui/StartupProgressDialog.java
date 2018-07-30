@@ -51,7 +51,7 @@ public class StartupProgressDialog extends JFrame {
     {
         this.clientCaller = clientCaller;
         
-        URL iconUrl = this.getClass().getClassLoader().getResource("images/BitcoinZ.png");
+        URL iconUrl = this.getClass().getClassLoader().getResource("images/bzedge.png");
         imageIcon = new ImageIcon(iconUrl);
         imageLabel.setIcon(imageIcon);
         imageLabel.setBorder(BorderFactory.createEmptyBorder(16, 16, 0, 16));
