@@ -88,7 +88,7 @@ public class ZCashInstallationObserver
 			zcashcli = OSUtil.findZCashCommand(OSUtil.getZCashCli());
 		}
 
-		Log.info("Using BitcoinZ utilities: " +
+		Log.info("Using BZEdge utilities: " +
 		                   "bzedged: "    + ((zcashd != null) ? zcashd.getCanonicalPath() : "<MISSING>") + ", " +
 		                   "bzedge-cli: " + ((zcashcli != null) ? zcashcli.getCanonicalPath() : "<MISSING>"));
 
@@ -296,7 +296,7 @@ public class ZCashInstallationObserver
 		}
 		
 		String blockChainDir = OSUtil.getBlockchainDirectory();
-		File zenConf = new File(blockChainDir + File.separator + "bitcoinz.conf");
+		File zenConf = new File(blockChainDir + File.separator + "bzedge.conf");
 		if (zenConf.exists())
 		{
 			Properties confProps = new Properties();
