@@ -122,7 +122,7 @@ public class DashboardPanel
 		
 		JPanel tempPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 5, 9));
 		JLabel logoLabel = new JLabel(new ImageIcon(
-			this.getClass().getClassLoader().getResource("images/btz_icon.png")));
+			this.getClass().getClassLoader().getResource("images/bzedge_icon.png")));
 		tempPanel.add(logoLabel);
 		// TODO: use relative size
 		JLabel zcLabel = new JLabel("BZEdge Wallet ");
@@ -389,7 +389,7 @@ public class DashboardPanel
 		}
 		
 		String text =
-			"<html><span style=\"font-weight:bold;color:#303030\">zcashd</span> status: " +
+			"<html><span style=\"font-weight:bold;color:#303030\">bzedged</span> status: " +
 		    daemonStatus + ",  " + runtimeInfo + " <br/>" +
 			"Wallet: <span style=\"font-weight:bold;color:#303030\">" + walletDAT.getCanonicalPath() + "</span>" + 
 			walletEncryption + " <br/> " +

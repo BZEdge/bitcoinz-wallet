@@ -108,7 +108,7 @@ public class ZCashUI
     public ZCashUI(StartupProgressDialog progressDialog)
         throws IOException, InterruptedException, WalletCallException
     {
-        super("BZedge Wallet 1.0.0");
+        super("BZedge Wallet 2.0.3");
         
         if (progressDialog != null)
         {
@@ -117,7 +117,7 @@ public class ZCashUI
         
         ClassLoader cl = this.getClass().getClassLoader();
 
-        this.setIconImage(new ImageIcon(cl.getResource("images/BitcoinZ.png")).getImage());
+        this.setIconImage(new ImageIcon(cl.getResource("images/bzedge.png")).getImage());
 
         Container contentPane = this.getContentPane();
 
@@ -681,7 +681,7 @@ public class ZCashUI
 			}
 		}
 		
-		File zenConfigFile = new File(dir, "bitcoinz.conf");
+		File zenConfigFile = new File(dir, "bzedge.conf");
 		
 		if (!zenConfigFile.exists())
 		{

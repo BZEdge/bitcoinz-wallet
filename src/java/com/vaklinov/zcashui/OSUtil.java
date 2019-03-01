@@ -102,7 +102,7 @@ public class OSUtil
 	// Returns the name of the zcashd server - may vary depending on the OS.
 	public static String getZCashd()
 	{
-		String zcashd = "zcashd";
+		String zcashd = "bzedged";
 		
 		OS_TYPE os = getOSType();
 		if (os == OS_TYPE.WINDOWS)
@@ -117,7 +117,7 @@ public class OSUtil
 	// Returns the name of the zcash-cli tool - may vary depending on the OS.
 	public static String getZCashCli()
 	{
-		String zcashcli = "zcash-cli";
+		String zcashcli = "bzedge-cli";
 		
 		OS_TYPE os = getOSType();
 		if (os == OS_TYPE.WINDOWS)
@@ -218,13 +218,13 @@ public class OSUtil
 		
 		if (os == OS_TYPE.MAC_OS)
 		{
-			return new File(System.getProperty("user.home") + "/Library/Application Support/BitcoinZ").getCanonicalPath();
+			return new File(System.getProperty("user.home") + "/Library/Application Support/BZEdge").getCanonicalPath();
 		} else if (os == OS_TYPE.WINDOWS)
 		{
-			return new File(System.getenv("APPDATA") + "\\BitcoinZ").getCanonicalPath();
+			return new File(System.getenv("APPDATA") + "\\BZEdge").getCanonicalPath();
 		} else
 		{
-			return new File(System.getProperty("user.home") + "/.bitcoinz").getCanonicalPath();
+			return new File(System.getProperty("user.home") + "/.bzedge").getCanonicalPath();
 		}
 	}
 
@@ -239,13 +239,13 @@ public class OSUtil
 	    
 	    if (os == OS_TYPE.MAC_OS)
 	    {
-	        dir = new File(userHome, "Library/Application Support/BitcoinZWallet");
+	        dir = new File(userHome, "Library/Application Support/BZEdgeWallet");
 	    } else if (os == OS_TYPE.WINDOWS)
 		{
-			dir = new File(System.getenv("LOCALAPPDATA") + "\\BitcoinZWallet");
+			dir = new File(System.getenv("LOCALAPPDATA") + "\\BZEdgeWallet");
 		} else
 	    {
-	        dir = new File(userHome.getCanonicalPath() + File.separator + ".BitcoinZWallet");
+	        dir = new File(userHome.getCanonicalPath() + File.separator + ".BZEdgeWallet");
 	    }
 	    
 		if (!dir.exists())
@@ -288,7 +288,7 @@ public class OSUtil
 	    File f;
 	    
 	    // Try with system property zcash.location.dir - may be specified by caller
-	    String ZCashLocationDir = System.getProperty("bitcoinz.location.dir");
+	    String ZCashLocationDir = System.getProperty("bzedge.location.dir");
 	    if ((ZCashLocationDir != null) && (ZCashLocationDir.trim().length() > 0))
 	    {
 	        f = new File(ZCashLocationDir + File.separator + command);
@@ -308,11 +308,11 @@ public class OSUtil
 				"/usr/bin/", // Typical Ubuntu
 				"/bin/",
 				"/usr/local/bin/",
-				"/usr/local/bitcoinz/bin/",
-				"/usr/lib/bitcoinz/bin/",
+				"/usr/local/bzedge/bin/",
+				"/usr/lib/bzedge/bin/",
 				"/opt/local/bin/",
-				"/opt/local/bitcoinz/bin/",
-				"/opt/bitcoinz/bin/"
+				"/opt/local/bzedge/bin/",
+				"/opt/bzedge/bin/"
 			};
 	
 			for (String d : dirs)
@@ -333,7 +333,7 @@ public class OSUtil
 	    		File pf = new File(programFiles);
 	    		if (pf.exists() && pf.isDirectory())
 	    		{
-	    			File ZDir = new File(pf, "BitcoinZ");
+	    			File ZDir = new File(pf, "BZEdge");
 	    			if (ZDir.exists() && ZDir.isDirectory())
 	    			{
 	    				File cf = new File(ZDir, command);

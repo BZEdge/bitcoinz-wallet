@@ -136,7 +136,7 @@
 	      <data src="${src.dir}/resources/ubuntu-package/BitcoinZWallet.desktop" type="file">
 	        <mapper type="perm" filemode="755" prefix="/usr/share/applications"/>
 	      </data>
-	      <data src="${src.dir}/resources/ubuntu-package/BitcoinZ.png" type="file">
+	      <data src="${src.dir}/resources/ubuntu-package/bzedge.png" type="file">
 	        <mapper type="perm" filemode="755" prefix="/usr/lib/bitcoinz-wallet"/>
 	      </data>
 	    </deb>

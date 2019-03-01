@@ -51,7 +51,7 @@ public class StartupProgressDialog extends JFrame {
     {
         this.clientCaller = clientCaller;
         
-        URL iconUrl = this.getClass().getClassLoader().getResource("images/BitcoinZ.png");
+        URL iconUrl = this.getClass().getClassLoader().getResource("images/bzedge.png");
         imageIcon = new ImageIcon(iconUrl);
         imageLabel.setIcon(imageIcon);
         imageLabel.setBorder(BorderFactory.createEmptyBorder(16, 16, 0, 16));
@@ -90,7 +90,7 @@ public class StartupProgressDialog extends JFrame {
             keyFetcher.fetchIfMissing(this);
         }
         
-        Log.info("Splash: checking if zcashd is already running...");
+        Log.info("Splash: checking if bzedged is already running...");
         boolean shouldStartZCashd = false;
         try {
             clientCaller.getDaemonRawRuntimeInfo();
@@ -105,13 +105,13 @@ public class StartupProgressDialog extends JFrame {
         }
         
         if (!shouldStartZCashd) {
-        	Log.info("Splash: zcashd already running...");
+        	Log.info("Splash: bzedged already running...");
             // What if started by hand but taking long to initialize???
 //            doDispose();
 //            return;
         } else
         {
-        	Log.info("Splash: zcashd will be started...");
+        	Log.info("Splash: bzedged will be started...");
         }
         
         final Process daemonProcess = 
@@ -153,7 +153,7 @@ public class StartupProgressDialog extends JFrame {
         if (daemonProcess != null) // Shutdown only if we started it
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
-            	Log.info("Stopping zcashd because we started it - now it is alive: " +
+            	Log.info("Stopping bzedged because we started it - now it is alive: " +
                 		           StartupProgressDialog.this.isAlive(daemonProcess));
                 try 
                 {
@@ -163,7 +163,7 @@ public class StartupProgressDialog extends JFrame {
 	                while (!StartupProgressDialog.this.waitFor(daemonProcess, 3000))
 	                {
 	                	long end = System.currentTimeMillis();
-	                	Log.info("Waiting for " + ((end - start) / 1000) + " seconds for zcashd to exit...");
+	                	Log.info("Waiting for " + ((end - start) / 1000) + " seconds for bzedged to exit...");
 	                	
 	                	if (end - start > 10 * 1000)
 	                	{
@@ -178,12 +178,12 @@ public class StartupProgressDialog extends JFrame {
 	                }
 	            
 	                if (StartupProgressDialog.this.isAlive(daemonProcess)) {
-	                	Log.info("zcashd is still alive although we tried to stop it. " +
+	                	Log.info("bzedged is still alive although we tried to stop it. " +
 	                                           "Hopefully it will stop later!");
 	                    } else
-	                    	Log.info("zcashd shut down successfully");
+	                    	Log.info("bzedged shut down successfully");
                 } catch (Exception bad) {
-                	Log.error("Couldn't stop zcashd!", bad);
+                	Log.error("Couldn't stop bzedged!", bad);
                 }
             }
         });
