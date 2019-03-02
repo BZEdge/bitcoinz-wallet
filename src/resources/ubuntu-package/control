@@ -1,8 +1,8 @@
-Package: bitcoinz-wallet
-Version: 1.1.0.4
+Package: bzedge-wallet
+Version: 2.2.0.3
 Section: misc
 Priority: low
 Architecture: all
-Description: BitcoinZ Wallet
-Maintainer: BitcoinZ@team.com
-Depends: default-jdk, bitcoinz
+Description: BZEdge Wallet
+Maintainer: alphateam@getbze.com
+Depends: default-jdk, bzedge

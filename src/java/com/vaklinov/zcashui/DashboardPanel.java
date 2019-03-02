@@ -128,7 +128,7 @@ public class DashboardPanel
 		JLabel zcLabel = new JLabel("BZEdge Wallet ");
 		zcLabel.setFont(new Font("Helvetica", Font.BOLD | Font.ITALIC, 28));
 		tempPanel.add(zcLabel);
-		tempPanel.setToolTipText("Powered by BitcoinZ");
+		tempPanel.setToolTipText("Powered by BZEdge");
 		balanceStatusPanel.add(tempPanel, BorderLayout.WEST);
 		// TODO: use relative size - only!
 		JLabel transactionHeadingLabel = new JLabel(
