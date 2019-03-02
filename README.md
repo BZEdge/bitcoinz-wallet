@@ -1,14 +1,23 @@
 # BZEdge Wallet Instructions
 
 1. Download the latest Swing wallet from here https://github.com/bze-alphateam/bzedge-wallet/releases
+
 2. Make sure you download BZE binaries for your operating system from here: https://github.com/bze-alphateam/bzedge/releases and **place them in the same folder with the swing wallet. **
+
 3. Make sure you install JAVA from here https://java.com/en/download
+
 4. BZEdge requires sapling/sprout files in order to work. To get this files windows users must run "RUN-ME-FIRST.bat" and linux/macos users fetch-params.sh. This script will download the files needed for BZE to work. Wait for the script to finish.
-5. Create bzedge.conf configuration file. The path to the configuration file depends on the operating system
-a. Windows: ```%HOMEPATH%\AppData\Roaming\BZEdge\bzedge.conf```
-b. Linux: ```%HOMEPATH%/.bzedge/bzedge.conf```
-c. MAC: ```%HOMEPATH/Library/Application\ Support/BZEdge/bzedge.conf```
-5. Add the following lines in your configuration file: (**make sure you set your own username and password**)
+
+5. Create bzedge.conf configuration file. The path to the configuration file depends on the operating system: 
+
+   5.1. Windows: ```%HOMEPATH%\AppData\Roaming\BZEdge\bzedge.conf```
+   
+   5.2. Linux: ```%HOMEPATH%/.bzedge/bzedge.conf```
+   
+   5.3. Mac: ```%HOMEPATH/Library/Application\ Support/BZEdge/bzedge.conf```
+   
+   
+6. Add the following lines in your configuration file: (**make sure you set your own username and password**)
 ```
 daemon=1
 showmetrics=0
@@ -16,8 +25,9 @@ rpcuser=YOUR_USERNAME
 rpcpassword=A_SECURE_PASSWORD
 rpcport=1980
 ```
-6. Double click on BZEdgeWallet.jar to start the wallet. 
-7. wait for the wallet to sync. It might take some time since it has to sync a lot of blocks. At the time of writing this the blockchain has around 2.6 GB size. 
+7. Double click on BZEdgeWallet.jar to start the wallet. 
+
+8. wait for the wallet to sync. It might take some time since it has to sync a lot of blocks. At the time of writing this the blockchain has around 2.6 GB size. 
 
 Advices: 
 **- always backup your wallet in safe places. We recommend you to use paper wallets for long term holding**
