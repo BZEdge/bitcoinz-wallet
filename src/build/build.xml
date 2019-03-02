@@ -99,7 +99,7 @@
 	
     <target name="ubuntuPackage" depends="jar,copyothers">
     	<mkdir dir="${ubuntu.package.dir}"/>
-	    <deb destfile="${ubuntu.package.dir}/bzedge-wallet_1.2.0.3.deb"
+	    <deb destfile="${ubuntu.package.dir}/bzedge-wallet_2.2.0.3.deb"
 	    	 control="${src.dir}/resources/ubuntu-package"
 	    	 verbose="true">
 
