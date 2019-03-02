@@ -114,8 +114,8 @@ public class ZCashClientCaller
 		if ((zcashcli == null) || (!zcashcli.exists()))
 		{
 			throw new IOException(
-				"The BitcoinZ installation directory " + installDir + " needs to contain " +
-				"the command line utilities zcashd and zcash-cli. zcash-cli is missing!");
+				"The BZEdge installation directory " + installDir + " needs to contain " +
+				"the command line utilities bzedged and bzedge-cli. bzedge-cli is missing!");
 		}
 		
 		zcashd = new File(dir, OSUtil.getZCashd());
@@ -127,8 +127,8 @@ public class ZCashClientCaller
 		if (zcashd == null || (!zcashd.exists()))
 		{
 		    throw new IOException(
-		    	"The BitcoinZ command line utility " + zcashcli.getCanonicalPath() + 
-		    	" was found, but zcashd was not found!");
+		    	"The BZEdge command line utility " + zcashcli.getCanonicalPath() + 
+		    	" was found, but bzedged was not found!");
 		}
 	}
 

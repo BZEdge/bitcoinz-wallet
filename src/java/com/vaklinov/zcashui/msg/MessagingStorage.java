@@ -61,17 +61,17 @@ import com.vaklinov.zcashui.Util;
  * Stores the information about messages, identities etc in a dir structure. 
  * The standard directories are:
  * 
- * ~/.BitcoinZWallet/messaging - root dir
- * ~/.BitcoinZWallet/messaging/messagingoptions.json - options
- * ~/.BitcoinZWallet/messaging/ownidentity.json - own identity
- * ~/.BitcoinZWallet/messaging/ownidentity.json.bak.1 - own identity most recent backup
- * ~/.BitcoinZWallet/messaging/ownidentity.json.bak.9 - own identity oldest backup
- * ~/.BitcoinZWallet/messaging/contact_XXXX - a single contact named 0000 to 9999
- * ~/.BitcoinZWallet/messaging/contact_XXXX/identity.json - contact's identity
- * ~/.BitcoinZWallet/messaging/contact_XXXX/sent - sent messages dir
- * ~/.BitcoinZWallet/messaging/contact_XXXX/received - received messages dir
- * ~/.BitcoinZWallet/messaging/ignored_contacts - dir where ignored msg identities reside
- * ~/.BitcoinZWallet/messaging/ignored_contacts/UUID.json - single ignored identity.
+ * ~/.BZEdgeWallet/messaging - root dir
+ * ~/.BZEdgeWallet/messaging/messagingoptions.json - options
+ * ~/.BZEdgeWallet/messaging/ownidentity.json - own identity
+ * ~/.BZEdgeWallet/messaging/ownidentity.json.bak.1 - own identity most recent backup
+ * ~/.BZEdgeWallet/messaging/ownidentity.json.bak.9 - own identity oldest backup
+ * ~/.BZEdgeWallet/messaging/contact_XXXX - a single contact named 0000 to 9999
+ * ~/.BZEdgeWallet/messaging/contact_XXXX/identity.json - contact's identity
+ * ~/.BZEdgeWallet/messaging/contact_XXXX/sent - sent messages dir
+ * ~/.BZEdgeWallet/messaging/contact_XXXX/received - received messages dir
+ * ~/.BZEdgeWallet/messaging/ignored_contacts - dir where ignored msg identities reside
+ * ~/.BZEdgeWallet/messaging/ignored_contacts/UUID.json - single ignored identity.
  * 
  * The sent/received directories have a substructure of type:
  * sent/XXXX/message_xxx.json - where XXXX is between 0000 and 9999, xxx is between 000 and 999 
@@ -660,7 +660,7 @@ public class MessagingStorage
 	
 	// Stores the details of a single contact
 	// Root dir may be like:
-	// ~/.BitcoinZWallet/messaging/contact_XXXX
+	// ~/.BZEdgeWallet/messaging/contact_XXXX
 	static class SingleContactStorage
 	{
 		final String IGNORED_GROUP_IDS = "ignored_group_ids.json";
@@ -870,7 +870,7 @@ public class MessagingStorage
 	
 	// Stores messages of one type - sent/received for one contact
 	// Root directory may be like:
-	// ~/.BitcoinZWallet/messaging/contact_XXXX/sent
+	// ~/.BZEdgeWallet/messaging/contact_XXXX/sent
 	static class SentOrReceivedMessagesStore
 	{
 		private File rootDir;

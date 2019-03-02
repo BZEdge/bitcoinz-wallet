@@ -269,7 +269,7 @@ public class SendCashPanel
 					JOptionPane.showMessageDialog(
 							SendCashPanel.this.getRootPane().getParent(), 
 							"An unexpected error occurred when sending cash!\n" + 
-							"Please ensure that the BitcoinZ daemon is running and\n" +
+							"Please ensure that the BZEdge daemon is running and\n" +
 							"parameters are correct. You may try again later...\n" +
 							errMessage, 
 							"Error in sending cash", JOptionPane.ERROR_MESSAGE);
@@ -430,7 +430,7 @@ public class SendCashPanel
 					SendCashPanel.this.getRootPane().getParent(),
 					"The destination address to send BZE to:\n" +
 					destinationAddress + "\n"+
-					"does not appear to be a valid BitcoinZ address. BZE addresses start with t or z!",
+					"does not appear to be a valid BZEdge address. BZE addresses start with t or z!",
 					"Destination address is incorrect...",
 					JOptionPane.DEFAULT_OPTION,
 					JOptionPane.ERROR_MESSAGE,
