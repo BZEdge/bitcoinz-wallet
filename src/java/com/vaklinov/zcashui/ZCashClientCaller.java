@@ -935,7 +935,7 @@ public class ZCashClientCaller
 	{
 		String first_letter = key.substring(0, 1);
 		
-		// T keys start with "L" or "K"
+		// T keys start with "L", "K" or "5"
 		// Z keys start with "S" or "s"
 		
 		if (first_letter.equals("S") || first_letter.equals("s"))
@@ -997,7 +997,7 @@ public class ZCashClientCaller
 				throw new WalletCallException("Unexpected response from wallet: " + strResult);
 			}
 		}
-		else if (first_letter.equals("L") || first_letter.equals("K"))
+		else if (first_letter.equals("L") || first_letter.equals("K") || first_letter.equals("5"))
 		{
 			// try a T key
 			String strResult = this.executeCommandAndGetSingleStringResponse(
@@ -1019,7 +1019,7 @@ public class ZCashClientCaller
 		}
 		else
 		{
-			throw new WalletCallException("Single private key should start with a 'L' or a 'S' !!!");
+			throw new WalletCallException("Single private key should start with a 'L', 'K', '5', 'S' or a 's' !!!");
 		}
 		throw new WalletCallException("Error while importing private key");
 	}
