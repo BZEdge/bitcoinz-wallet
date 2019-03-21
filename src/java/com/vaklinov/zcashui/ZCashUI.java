@@ -108,7 +108,7 @@ public class ZCashUI
     public ZCashUI(StartupProgressDialog progressDialog)
         throws IOException, InterruptedException, WalletCallException
     {
-        super("BZEdge Wallet 2.0.3");
+        super("BZEdge Wallet 2.0.4");
         
         if (progressDialog != null)
         {
